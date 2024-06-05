@@ -18,9 +18,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-
 @Composable
-fun SecondScreen(navigationToFirstScreen:()->Unit){
+fun ThirdScreen(navigationToThirdScreen:()->Unit){
 
     Column(modifier = Modifier
         .fillMaxSize()
@@ -29,16 +28,17 @@ fun SecondScreen(navigationToFirstScreen:()->Unit){
         horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
-        Text(text = "Seconda schermata", fontSize = 16.sp)
+        Text(text = "Terza schermata", fontSize = 16.sp)
         Spacer(modifier = Modifier.height(16.dp))
-        Text(text = "WELCOME!", fontSize = 25.sp)
-        Button(onClick = { navigationToFirstScreen()}) {
-            Text(text = "Vai a terza  schermata", fontSize = 16.sp)
+
+
+        Button(onClick = { navigationToThirdScreen()}) {
+            Text(text = "Vai a Prima  schermata", fontSize = 16.sp)
         }
     }
 }
 @Preview(showBackground=true)
 @Composable
-fun SecondScreenPreview(){
-    SecondScreen({})
+fun ThirdScreenPreview(){
+   ThirdScreen({})
 }
